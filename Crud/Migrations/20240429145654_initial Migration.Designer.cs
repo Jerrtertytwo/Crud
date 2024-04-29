@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Crud.Migrations
 {
     [DbContext(typeof(Applicationdbcontext))]
-    [Migration("20240429030043_Initial Migration")]
-    partial class InitialMigration
+    [Migration("20240429145654_initial Migration")]
+    partial class initialMigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -43,9 +43,8 @@ namespace Crud.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Subcribed")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<bool>("Subscribed")
+                        .HasColumnType("bit");
 
                     b.HasKey("Id");
 

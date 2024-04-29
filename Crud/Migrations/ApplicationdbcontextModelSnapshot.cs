@@ -40,9 +40,8 @@ namespace Crud.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Subcribed")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<bool>("Subscribed")
+                        .HasColumnType("bit");
 
                     b.HasKey("Id");
 

@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Crud.Data
 {
-    public class Applicationdbcontext : DbContext
+    public class Applicationdbcontext: DbContext
     {
         public Applicationdbcontext(DbContextOptions<Applicationdbcontext> Options) : base(Options)
         {
